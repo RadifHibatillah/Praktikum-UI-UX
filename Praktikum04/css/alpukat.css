@@ -1,0 +1,121 @@
+body {
+  background-color: lightblue;
+  font-family: "Lucida Sans", Verdana, sans-serif;
+}
+
+h1 {
+  text-align: center;
+  color: blueviolet;
+}
+
+p {
+  text-align: justify;
+  width: fit-content;
+}
+
+.center {
+  width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.foto {
+  background-color: black;
+  display: flex;
+  justify-content: space-between;
+  padding: auto;
+}
+
+.foto img {
+  width: 23%;
+}
+.img {
+  border: 3px solid #d5ebcf;
+  border-radius: 25px;
+  display: block;
+  width: fit-content;
+  padding-left: auto;
+  padding-right: auto;
+}
+
+.cod {
+  background-color: aqua;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 10px 15px;
+  border: 1px dotted red;
+  text-align: center;
+  font-weight: bold;
+  color: blue;
+  border: 2px dotted black;
+  border-radius: 15px;
+}
+.cod p {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  justify-content: center;
+}
+.manfaat {
+  background-color: rgb(167, 163, 104);
+}
+
+.promo {
+  text-align: center;
+  color: red;
+}
+
+#tombol {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  border: 2px solid whitesmoke;
+  background-color: yellow;
+  color: red;
+}
+.harga {
+  margin: 30px;
+  padding: 20px;
+}
+
+.harga h2 {
+  text-align: center;
+  color: green;
+}
+
+.harga table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.harga th {
+  background-color: darkgreen;
+  color: white;
+  padding: 12px;
+  border: 1px solid black;
+}
+
+.harga td {
+  padding: 10px;
+  border: 1px solid black;
+  text-align: center;
+}
+
+.harga .baris1 {
+  background-color: lightgreen;
+}
+
+.harga .baris2 {
+  background-color: lightblue;
+}
+
+.harga .baris3 {
+  background-color: lightseagreen;
+}
+
+.harga .baris4 {
+  background-color: lightyellow;
+}
