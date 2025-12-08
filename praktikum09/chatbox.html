@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Chatbox Sederhana</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+}
+#chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 260px;
+    background: white;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+#chat-header {
+    background: #007bff;
+    color: white;
+    padding: 10px;
+    border-radius: 8px 8px 0 0;
+    font-size: 15px;
+}
+#messages {
+    height: 200px;
+    overflow-y: auto;
+    padding: 10px;
+    font-size: 14px;
+}
+#input-area {
+    display: flex;
+    padding: 10px;
+    gap: 5px;
+}
+#msg {
+    flex: 1;
+    padding: 5px;
+}
+#send {
+    padding: 5px 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+
+<div id="chatbox">
+    <div id="chat-header">Chatbox</div>
+    <div id="messages"></div>
+    <div id="input-area">
+        <input type="text" id="msg" placeholder="Tulis pesan...">
+        <button id="send" onclick="kirim()">Kirim</button>
+    </div>
+</div>
+
+<script>
+function kirim() {
+    let pesan = document.getElementById("msg");
+    if (pesan.value.trim() === "") return;
+    let kotak = document.getElementById("messages");
+    let p = document.createElement("div");
+    p.textContent = pesan.value;
+    kotak.appendChild(p);
+    pesan.value = "";
+    kotak.scrollTop = kotak.scrollHeight;
+}
+</script>
+
+</body>
+</html>

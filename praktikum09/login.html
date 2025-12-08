@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Login Authentication</title>
+</head>
+<body>
+
+<h2>Halaman Login</h2>
+
+<form>
+    <label>Username:</label>
+    <input type="text" id="username"><br><br>
+
+    <label>Password:</label>
+    <input type="password" id="password"><br><br>
+
+    <button type="button" onclick="login()">Login</button>
+</form>
+
+<script>
+const USERNAME_BENAR = "ahmad2017";
+const PASSWORD_BENAR = "integrity";
+
+function login() {
+    let user = document.getElementById("username").value;
+    let pass = document.getElementById("password").value;
+
+    if (user === USERNAME_BENAR && pass === PASSWORD_BENAR) {
+        alert("Login Sukses!");
+
+        
+        document.write("<h1>Login Sukses</h1>");
+    } else {
+        alert("Login Gagal! Username atau Password salah.");
+    }
+}
+</script>
+
+</body>
+</html>

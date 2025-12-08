@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form>
+        <label for="name">Nama:</label>
+        <input type="text" id="name" placeholder="Masukkan nama anda"> <span></span>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Masukkan email anda"><span></span>
+        <br>
+         <label for="jam">Jam Keberangkat:</label>
+        <input type="time" id="jam" placeholder="Masukkan Jam Keberangkatan"> <span></span>
+        <br>
+         <label for="jam">Tujuan:</label>
+        <input type="text" id="tujuan" placeholder="Masukkan Tujuan Anda"> <span></span>
+        <br>
+         <label for="tiket">Jumlah Tiket:</label>
+        <input type="number" id="tiket" placeholder="Masukkan Jumlah Tiket"> <span></span>
+        <br>
+        <input type="button" value="submit" onclick="formValidation()">
+    </form>
+    <div>
+        <h1 id="hasil"></h1>
+        <p id="hasilName"></p>
+         <p id="hasilEmail"></p>
+          <p id="hasilJam"></p>
+           <p id="hasilTujuan"></p>
+            <p id="hasilTiket"></p>
+    </div>
+    <script>
+        function formValidation(){
+            let nama = document.getElementById("name").value;
+            let email = document.getElementById("email").value;
+            let jam = document.getElementById("jam").value;
+            let tujuan = document.getElementById("tujuan").value;
+            let tiket = document.getElementById("tiket").value;
+
+            if(nama === ""){
+                alert("Nama tidak boleh kosong");
+                return false;
+            }
+            if(email === ""){
+                alert("Email tidak boleh kosong");
+                return false;
+            }
+            if(jam === ""){
+                alert("Jam Keberangkatan tidak boleh kosong");
+                return false;
+            }
+            if(tujuan === ""){
+                alert("Tujuan tidak boleh kosong");
+                return false;
+            }
+            if(tiket === "" || tiket <= 0){
+                alert("Jumlah Tiket harus lebih dari 0");
+                return false;
+            }
+
+            document.getElementById("hasil").innerText = "Form Submitted Successfully!";
+            document.getElementById("hasilName").innerText = "Nama: " + nama;
+            document.getElementById("hasilEmail").innerText = "Email: " + email;
+            document.getElementById("hasilJam").innerText = "Jam Keberangkatan: " + jam;
+            document.getElementById("hasilTujuan").innerText = "Tujuan: " + tujuan;
+            document.getElementById("hasilTiket").innerText = "Jumlah Tiket: " + tiket;
+        }
+    </script>
+</body>
+</html>
