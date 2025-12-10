@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 2 - Web Programming</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f5f5f5;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 40px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .breadcrumb {
+            color: #999;
+            font-size: 14px;
+            margin-bottom: 15px;
+        }
+        
+        .breadcrumb a {
+            color: #3498db;
+            text-decoration: none;
+        }
+        
+        .form-section {
+            background-color: #f8f8f8;
+            padding: 25px 30px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        .form-section h2 {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 25px;
+            color: #333;
+        }
+        
+        .form-group {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 18px;
+        }
+        
+        .form-group label {
+            width: 140px;
+            padding-top: 8px;
+            font-size: 14px;
+            color: #333;
+        }
+        
+        .form-group input[type="text"],
+        .form-group input[type="number"],
+        .form-group select,
+        .form-group textarea {
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+        
+        .form-group input[type="text"].short {
+            width: 200px;
+        }
+        
+        .form-group input[type="text"].medium {
+            width: 300px;
+        }
+        
+        .form-group input[type="text"].long {
+            width: 600px;
+        }
+        
+        .form-group input[type="number"] {
+            width: 300px;
+        }
+        
+        .form-group select {
+            width: 300px;
+            background-color: white;
+            cursor: pointer;
+        }
+        
+        .form-group textarea {
+            width: 600px;
+            height: 100px;
+            resize: vertical;
+        }
+        
+        .date-input-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .date-input {
+            width: 180px;
+            padding: 8px 10px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .calendar-btn {
+            padding: 7px 12px;
+            border: 1px solid #ccc;
+            background-color: #e8e8e8;
+            cursor: pointer;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+        
+        .calendar-btn:hover {
+            background-color: #d8d8d8;
+        }
+        
+        .submit-btn {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 35px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            margin-top: 10px;
+            margin-left: 140px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .caption {
+            text-align: center;
+            margin-top: 25px;
+            font-size: 14px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="breadcrumb">
+            <a href="#">Kegiatan</a> / Create New Seminar/Workshop
+        </div>
+        
+        <div class="form-section">
+            <h2>Create New Seminar</h2>
+            
+            <div class="form-group">
+                <label>Kode</label>
+                <input type="text" class="short" name="kode">
+            </div>
+            
+            <div class="form-group">
+                <label>Nama Kegiatan</label>
+                <input type="text" class="long" name="nama_kegiatan">
+            </div>
+            
+            <div class="form-group">
+                <label>Tanggal Mulai</label>
+                <div class="date-input-wrapper">
+                    <input type="text" class="date-input" value="12 May 2016">
+                    <button class="calendar-btn">📅</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Tanggal Akhir</label>
+                <div class="date-input-wrapper">
+                    <input type="text" class="date-input" value="12 May 2016">
+                    <button class="calendar-btn">📅</button>
+                </div>
+            </div>
+            
+            <div class="form-group">
+                <label>Biaya</label>
+                <input type="number" class="medium" name="biaya">
+            </div>
+            
+            <div class="form-group">
+                <label>Tempat</label>
+                <input type="text" class="medium" name="tempat">
+            </div>
+            
+            <div class="form-group">
+                <label>Latitude</label>
+                <input type="text" class="short" name="latitude">
+            </div>
+            
+            <div class="form-group">
+                <label>Longitude</label>
+                <input type="text" class="short" name="longitude">
+            </div>
+            
+            <div class="form-group">
+                <label>Jenis Kegiatan</label>
+                <select name="jenis_kegiatan">
+                    <option>Select</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label>PIC</label>
+                <input type="text" class="medium" name="pic">
+            </div>
+            
+            <div class="form-group">
+                <label>Deskripsi</label>
+                <textarea name="deskripsi"></textarea>
+            </div>
+            
+            <button class="submit-btn">Simpan</button>
+        </div>
+        
+        <div class="caption">Gambar: Halaman Admin Create Seminar esem.com</div>
+    </div>
+</body>
+</html>
